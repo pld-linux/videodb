@@ -1,17 +1,17 @@
-%define		dl_ver	2004-08-01
+%define		dl_ver	2_0_2
 Summary:	Video database
 Summary(pl):	Katalog filmów
 Name:		videodb
-Version:	20040801
+Version:	2.0.2
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://dl.sourceforge.net/videodb/%{name}-%{dl_ver}.tgz
-# Source0-md5:	9a71671f09b9b4d7f79a5545b840973c
-Patch0:		%{name}-install_fix.patch
+# Source0-md5:	96d82437bada963b72362d66c0a32e88
 URL:		http://www.splitbrain.org/Programming/PHP/VideoDB/index.php
 BuildArch:	noarch
-Requires:	php >= 4.1.0
+Requires:	php >= 4.2.0
 Requires:	php-mysql
 Requires:	webserver
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,7 +26,6 @@ VideoDB jest programem s³u¿±cym do katalogowania kolekcji filmów.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -39,5 +38,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/{CHANGES,README,TODO,manual}
+%doc doc/{*.sql,CHANGES,README,TODO,manual,development}
 %{_instdir}
