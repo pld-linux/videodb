@@ -10,10 +10,10 @@ Group:		Applications/Archiving
 Source0:	http://dl.sourceforge.net/videodb/%{name}-%{dl_ver}.tgz
 # Source0-md5:	96d82437bada963b72362d66c0a32e88
 URL:		http://www.splitbrain.org/Programming/PHP/VideoDB/index.php
-BuildArch:	noarch
-Requires:	php >= 4.2.0
-Requires:	php-mysql
+Requires:	php(mysql)
 Requires:	webserver
+Requires:	webserver(php) >= 4.2.0
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_instdir	/home/services/httpd/html/videodb
