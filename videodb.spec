@@ -1,6 +1,6 @@
 %define		dl_ver	2_0_2
 Summary:	Video database
-Summary(pl.UTF-8):   Katalog filmów
+Summary(pl.UTF-8):	Katalog filmów
 Name:		videodb
 Version:	2.0.2
 Release:	1
