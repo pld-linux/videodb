@@ -1,6 +1,6 @@
 %define		dl_ver	2_0_2
 Summary:	Video database
-Summary(pl):	Katalog filmów
+Summary(pl.UTF-8):   Katalog filmÃ³w
 Name:		videodb
 Version:	2.0.2
 Release:	1
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 VideoDB is a database to manage your personal video collection.
 
-%description -l pl
-VideoDB jest programem s³u¿±cym do katalogowania kolekcji filmów.
+%description -l pl.UTF-8
+VideoDB jest programem sÅ‚uÅ¼Ä…cym do katalogowania kolekcji filmÃ³w.
 
 %prep
 %setup -q -n %{name}
